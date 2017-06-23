@@ -7,11 +7,11 @@ branches:
     - master
 
 before_script:
-  - yarn global firebase-tools
+  - npm install -g firebase-tools
   - yarn
 
 script:
   - yarn run build
 
 after_success:
-  - firebase deploy --token=${FIREBASE_API_TOKEN}
+  - firebase deploy --token=${FIREBASE_API_TOKEN} --non-interactive
