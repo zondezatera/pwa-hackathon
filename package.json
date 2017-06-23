@@ -29,6 +29,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "firebase deploy",
     "clean": "rm -rf node_modules && watchman watch-del-all && npm cache clean",
     "lint": "node node_modules/eslint/bin/eslint.js . --fix --ignore-path .gitignore --format=node_modules/eslint-formatter-pretty",
     "lint-validate": "node node_modules/eslint/bin/eslint.js .  --ignore-path .gitignore  --quiet",
