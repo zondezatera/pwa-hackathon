@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.16.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "bulma": "^0.4.2",
     "firebase": "^4.1.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
@@ -19,11 +21,16 @@
     "eslint-formatter-pretty": "^1.1.0",
     "eslint-plugin-import": "^2.6.0",
     "eslint-plugin-react": "^7.1.0",
+    "node-sass": "^4.5.3",
     "react-scripts": "1.0.7"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "clean": "rm -rf node_modules && watchman watch-del-all && npm cache clean",
+    "lint": "node node_modules/eslint/bin/eslint.js . --fix --ignore-path .gitignore --format=node_modules/eslint-formatter-pretty",
+    "lint-validate": "node node_modules/eslint/bin/eslint.js .  --ignore-path .gitignore  --quiet",
+    "sass-convert": "node-sass src/ -o src/",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
