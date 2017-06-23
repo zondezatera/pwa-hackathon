@@ -4,7 +4,7 @@ import AppBar from 'material-ui/AppBar'
 class TestComponent extends Component {
   render() {
     return (
-      <div className="App">
+      <div>
         <AppBar
           title="Drunk Limit"
           iconClassNameRight="muidocs-icon-navigation-expand-more"

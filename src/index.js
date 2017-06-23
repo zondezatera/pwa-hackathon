@@ -5,7 +5,7 @@ import TestComponent from './App'
 import registerServiceWorker from './registerServiceWorker'
 
 const App = () => (
-  <MuiThemeProvider>
+  <MuiThemeProvider >
     <TestComponent />
   </MuiThemeProvider>
 )
