@@ -11,7 +11,7 @@ before_script:
   - npm install
 
 script:
-  - npm build
+  - npm run build
 
 after_success:
   - firebase deploy --token=${FIREBASE_API_TOKEN}
