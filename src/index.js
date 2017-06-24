@@ -22,8 +22,6 @@ firebase.initializeApp(config)
 window.$firebase = firebase
 
 registerServiceWorker()
-
-
 ReactDOM.render(
   <Provider store={store}>
     <ThemeProvider theme={theme}>

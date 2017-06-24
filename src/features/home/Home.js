@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 import { Card, CardMedia, CardTitle, CardActions } from 'react-toolbox/lib/card'
 import Button from 'react-toolbox/lib/button/Button'
+import { withReactRouterLink } from '../../utils/RRHoc'
 
-class HomeDetail extends Component {
+const RRButton = withReactRouterLink(Button)
+
+class Home extends Component {
   render() {
     return (
       <Card style={{ width: '350px', margin: '0 auto', marginTop: '35px', marginBottom: '35px', padding: '20px 0' }}>
@@ -16,11 +19,11 @@ class HomeDetail extends Component {
           style={{ textAlign: 'center', margin: ' 0 auto' }}
         />
         <CardActions style={{ margin: '0 auto' }}>
-          <Button icon='games' label='Let Do it !' raised primary />
+          <RRButton icon='games' label='Let Do it !' raised primary to="/profile" />
         </CardActions>
       </Card>
     )
   }
 }
 
-export default HomeDetail
+export default Home
