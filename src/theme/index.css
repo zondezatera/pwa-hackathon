@@ -14,6 +14,9 @@ a {
 p {
   font-family: 'Kanit', sans-serif; }
 
+h4 {
+  margin: 10px; }
+
 .wrapper-view {
   width: 350px;
   margin: 0 auto;

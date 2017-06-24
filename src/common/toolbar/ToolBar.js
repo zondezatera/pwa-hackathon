@@ -19,14 +19,14 @@ class ToolBar extends Component {
   handleToggle() {
     this.setState({ active: !this.state.active })
   }
-  renderItem(item) {
+  renderItem(item, index) {
     return (
-      <RRListItem caption={item.title} leftIcon={item.icon} to={item.url} />
+      <RRListItem caption={item.title} leftIcon={item.icon} to={item.url} key={`menu-item-${index}`} />
     )
   }
 
   renderListItem() {
-    return menuList.map(item => this.renderItem(item))
+    return menuList.map((item, index) => this.renderItem(item, index))
   }
 
   render() {
