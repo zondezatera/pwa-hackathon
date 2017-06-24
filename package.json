@@ -13,6 +13,7 @@
     "react-toolbox": "^2.0.0-beta.12",
     "react-toolbox-themr": "^1.0.2",
     "redux": "^3.7.0",
+    "redux-form": "^6.8.0",
     "redux-router5": "^4.2.3",
     "redux-thunk": "^2.2.0",
     "router5": "^4.7.1"
@@ -45,19 +46,20 @@
   },
   "reactToolbox": {
     "include": [
-        "BUTTON",
-        "APP_BAR",
-        "DRAWER",
-        "CARD",
-        "MENU",
-        "DATE_PICKER"
+      "BUTTON",
+      "APP_BAR",
+      "DRAWER",
+      "CARD",
+      "MENU",
+      "DATE_PICKER",
+      "INPUT"
     ],
     "customProperties": {
-        "animation-duration": "0.3s",
-        "color-accent": "var(--palette-pink-a200)",
-        "color-accent-dark": "var(--palette-pink-700)",
-        "color-primary-contrast": "var(--color-dark-contrast)",
-        "color-accent-contrast": "var(--color-dark-contrast)"
+      "animation-duration": "0.3s",
+      "color-accent": "var(--palette-pink-a200)",
+      "color-accent-dark": "var(--palette-pink-700)",
+      "color-primary-contrast": "var(--color-dark-contrast)",
+      "color-accent-contrast": "var(--color-dark-contrast)"
     },
     "output": "src/theme/react-toolbox"
   }

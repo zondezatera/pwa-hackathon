@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import AppBar from 'react-toolbox/lib/app_bar/AppBar'
-// import Link from 'react-toolbox/lib/link/Link'
 import Drawer from 'react-toolbox/lib/drawer/Drawer'
 import MenuItem from 'react-toolbox/lib/menu/MenuItem'
 import MenuDivider from 'react-toolbox/lib/menu/MenuDivider'
@@ -29,11 +28,11 @@ class ToolBar extends Component {
               subtitle="..."
             />
           </Card>
-          <MenuItem value='home' icon='home' caption='Home' />
-          <MenuItem value='dashboard' icon='dashboard' caption='Dashboard' />
-          <MenuItem value='history' icon='history' caption='History' />
+          <MenuItem value='home' icon='home' caption='Home' onClick={() => console.log('test')} />
+          <MenuItem value='dashboard' icon='dashboard' caption='Dashboard' onClick={() => console.log('test')} />
+          <MenuItem value='history' icon='history' caption='History' onClick={() => console.log('test')} />
           <MenuDivider />
-          <MenuItem value='settings' icon='settings' caption='Setting' />
+          <MenuItem value='settings' icon='settings' caption='Setting' onClick={() => console.log('test')} />
         </Drawer>
         <AppBar title='Drunk Limit' leftIcon='menu' onLeftIconClick={() => this.handleToggle()} />
       </div>
