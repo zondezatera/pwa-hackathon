@@ -1,9 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import * as firebase from 'firebase'
+import { Provider } from 'react-redux'
+import { RouterProvider } from 'react-router5'
+import { autoInit } from 'material-components-web'
 import registerServiceWorker from './utils/registerServiceWorker'
 import './theme/index.css'
 import App from './App'
+import configureStore from './store/configStore'
+import createRouter from './create-router'
 
 const config = {
   apiKey: 'AIzaSyCT4dOTEjbQ4Z5JwpZYMd4S0PJiLOvLuKY',
@@ -13,12 +18,22 @@ const config = {
   storageBucket: '',
   messagingSenderId: '419104359716'
 }
+const router = createRouter()
+const store = configureStore(router)
+const wrappedApp = (
+  <Provider store={ store } >
+    <RouterProvider router= { router }>
+      <App />
+    </RouterProvider>
+  </Provider>
+)
 
 firebase.initializeApp(config)
 window.$firebase = firebase
 
-ReactDOM.render((
-  <App />
-), document.getElementById('root'))
 registerServiceWorker()
+autoInit()
+router.start(() => {
+  ReactDOM.render(wrappedApp, document.getElementById('root'))
+})
 

@@ -13,8 +13,11 @@
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
     "react-router": "^4.1.1",
+    "react-router5": "^4.3.0",
     "redux": "^3.7.0",
-    "redux-thunk": "^2.2.0"
+    "redux-router5": "^4.2.3",
+    "redux-thunk": "^2.2.0",
+    "router5": "^4.7.1"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -24,7 +27,8 @@
     "eslint-plugin-import": "^2.6.0",
     "eslint-plugin-react": "^7.1.0",
     "node-sass": "^4.5.3",
-    "react-scripts": "1.0.7"
+    "react-scripts": "1.0.7",
+    "redux-logger": "^3.0.6"
   },
   "scripts": {
     "start": "react-scripts start",

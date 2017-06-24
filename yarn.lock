@@ -1548,10 +1548,6 @@ builtin-status-codes@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
 
-bulma@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.4.2.tgz#3be8c832cf6658bfc421ecb41f6dc5a8a0c7c0e5"
-
 bytes@2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-2.3.0.tgz#d5b680a165b6201739acb611542aabc2d8ceb070"
@@ -1676,10 +1672,6 @@ clap@^1.0.9:
   resolved "https://registry.yarnpkg.com/clap/-/clap-1.2.0.tgz#59c90fe3e137104746ff19469a27a634ff68c857"
   dependencies:
     chalk "^1.1.3"
-
-classnames@^2.2.5:
-  version "2.2.5"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
 
 clean-css@4.1.x:
   version "4.1.4"
@@ -2130,6 +2122,10 @@ debug@~2.2.0:
 decamelize@^1.0.0, decamelize@^1.1.1, decamelize@^1.1.2:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
+
+deep-diff@^0.3.5:
+  version "0.3.8"
+  resolved "https://registry.yarnpkg.com/deep-diff/-/deep-diff-0.3.8.tgz#c01de63efb0eec9798801d40c7e0dae25b582c84"
 
 deep-extend@~0.4.0:
   version "0.4.2"
@@ -3440,6 +3436,10 @@ ieee754@^1.1.4:
 ignore@^3.2.0, ignore@^3.3.3:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.3.tgz#432352e57accd87ab3110e82d3fea0e47812156d"
+
+immutable@^3.0.0:
+  version "3.8.1"
+  resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.1.tgz#200807f11ab0f72710ea485542de088075f68cd2"
 
 imurmurhash@^0.1.4:
   version "0.1.4"
@@ -5009,6 +5009,12 @@ path-parse@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.5.tgz#3c1adf871ea9cd6c9431b6ea2bd74a0ff055c4c1"
 
+path-parser@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/path-parser/-/path-parser-2.0.2.tgz#ab90ed1053b682681d1120a69208f6f6a6a734c2"
+  dependencies:
+    search-params "~1.3.0"
+
 path-to-regexp@0.1.7:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-0.1.7.tgz#df604178005f522f15eb4490e7247a1bfaa67f8c"
@@ -5439,7 +5445,7 @@ promise@7.1.1, promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.4:
+prop-types@^15.5.10, prop-types@^15.5.4, prop-types@~15.5.10:
   version "15.5.10"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
   dependencies:
@@ -5589,6 +5595,12 @@ react-redux@^5.0.5:
     lodash-es "^4.2.0"
     loose-envify "^1.1.0"
     prop-types "^15.5.10"
+
+react-router5@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/react-router5/-/react-router5-4.3.0.tgz#b4ad5d2f5abae0e73d3b72e86cd096fb18e830fc"
+  dependencies:
+    prop-types "~15.5.10"
 
 react-router@^4.1.1:
   version "4.1.1"
@@ -5762,6 +5774,20 @@ reduce-function-call@^1.0.1:
   resolved "https://registry.yarnpkg.com/reduce-function-call/-/reduce-function-call-1.0.2.tgz#5a200bf92e0e37751752fe45b0ab330fd4b6be99"
   dependencies:
     balanced-match "^0.4.2"
+
+redux-logger@^3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/redux-logger/-/redux-logger-3.0.6.tgz#f7555966f3098f3c88604c449cf0baf5778274bf"
+  dependencies:
+    deep-diff "^0.3.5"
+
+redux-router5@^4.2.3:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/redux-router5/-/redux-router5-4.2.3.tgz#ace7072ebc0684a1c13a2f11a491df87478a6d98"
+  dependencies:
+    router5.transition-path "~4.0.1"
+  optionalDependencies:
+    immutable "^3.0.0"
 
 redux-thunk@^2.2.0:
   version "2.2.0"
@@ -5971,6 +5997,24 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^2.0.0"
     inherits "^2.0.1"
 
+route-node@1.8.2:
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/route-node/-/route-node-1.8.2.tgz#0e10c324b00ad9bc9b398bbfb97466fad1f9c422"
+  dependencies:
+    path-parser "2.0.2"
+    search-params "~1.3.0"
+
+router5.transition-path@4.0.1, router5.transition-path@~4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/router5.transition-path/-/router5.transition-path-4.0.1.tgz#6d61d6b78e233aeff2e68f3b91b9a83338c2f723"
+
+router5@^4.7.1:
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/router5/-/router5-4.7.1.tgz#d8b8c011eb487ed37eaeac5ddd7ba8b4463ecdc9"
+  dependencies:
+    route-node "1.8.2"
+    router5.transition-path "4.0.1"
+
 run-async@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-0.1.0.tgz#c8ad4a5e110661e402a7d21b530e009f25f8e389"
@@ -6032,6 +6076,10 @@ scss-tokenizer@^0.2.3:
   dependencies:
     js-base64 "^2.1.8"
     source-map "^0.4.2"
+
+search-params@~1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/search-params/-/search-params-1.3.0.tgz#ba1e1c01dcbd8a2e41a25236f602f2cbf710d688"
 
 select-hose@^2.0.0:
   version "2.0.0"

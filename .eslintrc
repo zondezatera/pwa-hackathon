@@ -28,6 +28,7 @@
     "react/jsx-indent-props": [2, 2],
     "react/jsx-no-duplicate-props": 2,
     "react/jsx-space-before-closing": 2,
+    "react/no-string-refs": 0,
     "no-underscore-dangle": 0,
     "max-len": 0,
     "import/no-unresolved": [2, {"commonjs": true, "amd": true}],
