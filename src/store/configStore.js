@@ -1,13 +1,5 @@
-import { createStore, applyMiddleware, combineReducers } from 'redux'
-import { router5Middleware, router5Reducer } from 'redux-router5'
-import { createLogger } from 'redux-logger'
+import { createStore, applyMiddleware } from 'redux'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import Reducer from '../reducers'
 
-export default function configureStore(router, initialState = {}) {
-  const createStoreWithMiddleware = applyMiddleware(router5Middleware(router), createLogger())(createStore)
-  const store = createStoreWithMiddleware(combineReducers({
-    router: router5Reducer
-  }), initialState)
-
-  window.store = store
-  return store
-}
+export default createStore(Reducer, composeWithDevTools(applyMiddleware()))
