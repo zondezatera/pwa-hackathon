@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { HomeDetail } from '../../features'
 import { ToolBar } from '../../common'
+import { HomeDetail, Profile } from '../../features'
 
 class HomeScene extends Component {
   render() {
@@ -8,6 +8,7 @@ class HomeScene extends Component {
       <div className="wrapper-view">
         <ToolBar />
         <HomeDetail />
+        <Profile />
       </div>
     )
   }
