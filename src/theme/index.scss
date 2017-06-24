@@ -1,10 +1,25 @@
 @import "./react-toolbox/theme.css";
 html, body {
   height: 100%;
-  font-family: 'Abel', sans-serif;
+  font-family: 'Kanit', sans-serif;
+  background: url('https://firebasestorage.googleapis.com/v0/b/pwa-hackathon-67271.appspot.com/o/background.jpg?alt=media&token=0013aeab-3215-4d26-89b7-4168e2839f71') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 a {
   text-decoration: none;
+}
+p {
+  font-family: 'Kanit', sans-serif;
+}
+.wrapper-view {
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  padding: 20px 0;
 }
 .facebook {
   background-color: #3b5998 !important;

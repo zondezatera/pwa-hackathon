@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 import { ToolBar } from '../../common'
-import { Profile } from '../../features'
+import { Knowledge } from '../../features'
 
-class ProfileScene extends Component {
+class KnowledgeScene extends Component {
   render() {
     return (
       <div>
         <ToolBar />
-        <Profile />
+        <Knowledge />
       </div>
     )
   }
 }
 
-export default ProfileScene
+export default KnowledgeScene

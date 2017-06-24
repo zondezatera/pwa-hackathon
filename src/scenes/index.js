@@ -1,3 +1,5 @@
 export { default as HomeScene } from './home'
 export { default as ProfileScene } from './profile'
 export { default as SignInScene } from './signin'
+export { default as AlcoholScene } from './alcohol'
+export { default as KnowledgeScene } from './knowledge'
