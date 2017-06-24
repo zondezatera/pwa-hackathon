@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import firebase from 'firebase'
 
 class SignInWithFacebook extends Component {
@@ -16,10 +15,6 @@ class SignInWithFacebook extends Component {
       <button className='mdc-button mdc-button--raised facebook' onClick={() => this.signInWithFireBase()}> Sign With Facebook </button>
     )
   }
-}
-
-SignInWithFacebook.propTypes = {
-
 }
 
 export default SignInWithFacebook

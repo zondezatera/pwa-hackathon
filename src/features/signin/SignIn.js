@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { Logo } from '../../common'
 import SignInWithFacebook from './SignInWithFacebook'
 
@@ -16,7 +15,6 @@ class SignIn extends Component {
                   <Logo />
                   Drunk Limit
                 </h1>
-                <h2 className="mdc-card__subtitle"></h2>
               </section>
               <section className="mdc-card__supporting-text">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
