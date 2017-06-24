@@ -4,8 +4,6 @@
   "private": true,
   "dependencies": {
     "axios": "^0.16.2",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
     "firebase": "^4.1.3",
     "material-components-web": "^0.13.0",
     "prop-types": "^15.5.10",
@@ -14,6 +12,8 @@
     "react-redux": "^5.0.5",
     "react-router": "^4.1.1",
     "react-router5": "^4.3.0",
+    "react-toolbox": "^2.0.0-beta.12",
+    "react-toolbox-themr": "^1.0.2",
     "redux": "^3.7.0",
     "redux-router5": "^4.2.3",
     "redux-thunk": "^2.2.0",
@@ -21,6 +21,9 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
     "eslint": "^4.0.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-formatter-pretty": "^1.1.0",
@@ -32,13 +35,31 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "yarn run css && react-scripts build",
+    "build": "yarn run toolbox && react-scripts build",
     "deploy": "firebase deploy",
     "clean": "rm -rf node_modules && watchman watch-del-all && npm cache clean",
     "lint": "node node_modules/eslint/bin/eslint.js . --fix --ignore-path .gitignore --format=node_modules/eslint-formatter-pretty",
     "lint-validate": "node node_modules/eslint/bin/eslint.js .  --ignore-path .gitignore  --quiet",
     "css": "node node_modules/node-sass/bin/node-sass src/ -o src/",
+    "toolbox": "react-toolbox-themr && yarn run css",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "reactToolbox": {
+    "include": [
+        "BUTTON",
+        "APP_BAR",
+        "DRAWER",
+        "CARD",
+        "DATE_PICKER"
+    ],
+    "customProperties": {
+        "animation-duration": "0.3s",
+        "color-accent": "var(--palette-pink-a200)",
+        "color-accent-dark": "var(--palette-pink-700)",
+        "color-primary-contrast": "var(--color-dark-contrast)",
+        "color-accent-contrast": "var(--color-dark-contrast)"
+    },
+    "output": "src/theme/react-toolbox"
   }
 }

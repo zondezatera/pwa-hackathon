@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import firebase from 'firebase'
+import Button from 'react-toolbox/lib/button/Button'
 
 class SignInWithFacebook extends Component {
   signInWithFireBase() {
@@ -12,7 +13,9 @@ class SignInWithFacebook extends Component {
   }
   render() {
     return (
-      <button className='mdc-button mdc-button--raised facebook' onClick={() => this.signInWithFireBase()}> Sign With Facebook </button>
+      <Button className='facebook' href='http://github.com/javivelasco' target='_blank' raised onClick={() => this.signInWithFireBase()}>
+        Sign With Facebook
+      </Button>
     )
   }
 }
