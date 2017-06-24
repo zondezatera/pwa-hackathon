@@ -5,7 +5,7 @@ import { Home } from '../../features'
 class HomeScene extends Component {
   render() {
     return (
-      <div className="wrapper-view intro-page">
+      <div>
         <ToolBar />
         <Home />
       </div>

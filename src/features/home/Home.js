@@ -8,7 +8,7 @@ const RRButton = withReactRouterLink(Button)
 class Home extends Component {
   render() {
     return (
-      <Card style={{ width: '350px', margin: '0 auto', marginTop: '35px', marginBottom: '35px', padding: '20px 0' }}>
+      <Card className='wrapper-view'>
         <CardMedia
           aspectRatio="square"
           image="https://firebasestorage.googleapis.com/v0/b/pwa-hackathon-67271.appspot.com/o/icon-384x384.png?alt=media&token=7c49b623-d215-432f-a4da-8bddd6fc5c3c"
@@ -18,7 +18,7 @@ class Home extends Component {
           subtitle="Limit and Tracking your drunk !"
           style={{ textAlign: 'center', margin: ' 0 auto' }}
         />
-        <CardActions style={{ margin: '0 auto' }}>
+        <CardActions className="center">
           <RRButton icon='games' label='Let Do it !' raised primary to="/profile" />
         </CardActions>
       </Card>

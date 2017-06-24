@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import AppBar from 'react-toolbox/lib/app_bar/AppBar'
 import Drawer from 'react-toolbox/lib/drawer/Drawer'
 import { Card, CardTitle } from 'react-toolbox/lib/card'
-import { List, ListItem, ListDivider } from 'react-toolbox/lib/list'
+import { List, ListItem } from 'react-toolbox/lib/list'
 import { withReactRouterLink } from '../../utils/RRHoc'
+import { menuList } from '../../constants/'
 
 const RRListItem = withReactRouterLink(ListItem)
 
@@ -18,12 +19,21 @@ class ToolBar extends Component {
   handleToggle() {
     this.setState({ active: !this.state.active })
   }
+  renderItem(item) {
+    return (
+      <RRListItem caption={item.title} leftIcon={item.icon} to={item.url} />
+    )
+  }
+
+  renderListItem() {
+    return menuList.map(item => this.renderItem(item))
+  }
 
   render() {
     return (
       <div>
         <Drawer active={this.state.active} onOverlayClick={() => this.handleToggle()}>
-          <Card style={{ width: '350px' }}>
+          <Card style={{ width: '350px', marginTop: '30px' }}>
             <CardTitle
               avatar="https://placeimg.com/80/80/people"
               title="Zonde Zatera"
@@ -31,14 +41,10 @@ class ToolBar extends Component {
             />
           </Card>
           <List>
-            <RRListItem caption='Home' leftIcon='home' to='/' />
-            <RRListItem caption='Dashboard' leftIcon='dashboard' />
-            <RRListItem caption='History' leftIcon='history' />
-            <ListDivider />
-            <RRListItem caption='Setting' leftIcon='settings' />
+            {this.renderListItem()}
           </List>
         </Drawer>
-        <AppBar title='Drunk Limit' leftIcon='menu' onLeftIconClick={() => this.handleToggle()} />
+        <AppBar title='Drunk Limit' leftIcon='menu' onLeftIconClick={() => this.handleToggle()} scrollHide />
       </div>
     )
   }

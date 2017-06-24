@@ -2,11 +2,14 @@ import React, { Component } from 'react'
 import Input from 'react-toolbox/lib/input'
 import { Card, CardActions } from 'react-toolbox/lib/card'
 import Button from 'react-toolbox/lib/button/Button'
+import { withReactRouterLink } from '../../utils/RRHoc'
+
+const RRButton = withReactRouterLink(Button)
 
 class Profile extends Component {
   render() {
     return (
-      <Card style={{ width: '350px', margin: '0 auto', marginTop: '35px', marginBottom: '35px', padding: '20px 0' }}>
+      <Card className='wrapper-view'>
         <CardActions>
           <section>
             <Input type='text' label='name' value="Zonde Zatera" name='name' icon='account_circle' maxLength={50} />
@@ -16,7 +19,7 @@ class Profile extends Component {
           </section>
         </CardActions>
         <div className="center">
-          <Button className="confirmBtn" raised primary>Next</Button>
+          <RRButton className="confirmBtn" raised primary to='/alcohol'>Next</RRButton>
         </div>
       </Card>
     )
