@@ -5,12 +5,10 @@
   "dependencies": {
     "axios": "^0.16.2",
     "firebase": "^4.1.3",
-    "material-components-web": "^0.13.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
-    "react-router": "^4.1.1",
     "react-router5": "^4.3.0",
     "react-toolbox": "^2.0.0-beta.12",
     "react-toolbox-themr": "^1.0.2",
@@ -51,6 +49,7 @@
         "APP_BAR",
         "DRAWER",
         "CARD",
+        "MENU",
         "DATE_PICKER"
     ],
     "customProperties": {
