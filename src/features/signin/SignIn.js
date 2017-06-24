@@ -1,35 +1,24 @@
 import React, { Component } from 'react'
-import { Logo } from '../../common'
+import { Card, CardMedia, CardTitle, CardText, CardActions } from 'react-toolbox/lib/card'
 import SignInWithFacebook from './SignInWithFacebook'
 
 class SignIn extends Component {
   render() {
     return (
-      <div className="mdc-layout-grid">
-        <div className="mdc-layout-grid__inner">
-          <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-3 mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-phone"></div>
-          <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-8-tablet  mdc-layout-grid__cell--span-8-phone">
-            <div className="mdc-card wrapper-card">
-              <section className="mdc-card__primary text-center">
-                <h1 className="mdc-card__title mdc-card__title--large">
-                  <Logo />
-                  Drunk Limit
-                </h1>
-              </section>
-              <section className="mdc-card__supporting-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.
-              </section>
-              <section className="mdc-card__actions center">
-                <SignInWithFacebook />
-              </section>
-            </div>
-          </div>
-          <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-3 mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-phone"></div>
-        </div>
-      </div>
+      <Card style={{ width: '350px', margin: '0 auto', marginTop: '35px', marginBottom: '35px', padding: '20px 0' }}>
+        <CardMedia
+          aspectRatio="square"
+          image="https://firebasestorage.googleapis.com/v0/b/pwa-hackathon-67271.appspot.com/o/icon-384x384.png?alt=media&token=7c49b623-d215-432f-a4da-8bddd6fc5c3c"
+        />
+        <CardTitle
+          title="Drunk Limit"
+          style={{ textAlign: 'center', margin: ' 0 auto' }}
+        />
+        <CardText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</CardText>
+        <CardActions style={{ margin: '0 auto' }}>
+          <SignInWithFacebook />
+        </CardActions>
+      </Card>
     )
   }
 }

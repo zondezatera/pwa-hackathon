@@ -1,10 +1,11 @@
+@import "./react-toolbox/theme.css";
 html, body {
   height: 100%;
   font-family: 'Abel', sans-serif;
 }
 .facebook {
-  background-color: #3b5998;
-  color: #f7f7f7;
+  background-color: #3b5998 !important;
+  color: #f7f7f7 !important;
 }
 .text-center {
   text-align: center

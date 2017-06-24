@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom'
 import * as firebase from 'firebase'
 import { Provider } from 'react-redux'
 import { RouterProvider } from 'react-router5'
+import ThemeProvider from 'react-toolbox/lib/ThemeProvider'
 import registerServiceWorker from './utils/registerServiceWorker'
 import './theme/index.css'
+import theme from './theme/react-toolbox/theme'
 import App from './App'
 import configureStore from './store/configStore'
 import createRouter from './create-router'
@@ -22,7 +24,9 @@ const store = configureStore(router)
 const wrappedApp = (
   <Provider store={ store } >
     <RouterProvider router= { router }>
-      <App />
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
     </RouterProvider>
   </Provider>
 )

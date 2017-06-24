@@ -1,53 +1,35 @@
-// import React, { Component } from 'react'
-// import PropTypes from 'prop-types'
-// // import { drawer } from 'material-components-web'
-// import { connect } from 'react-redux'
-// import { bindActionCreators } from 'redux'
-// import { actions } from 'redux-router5'
+import React, { Component } from 'react'
+import AppBar from 'react-toolbox/lib/app_bar/AppBar'
+import Navigation from 'react-toolbox/lib/navigation/Navigation'
+// import Link from 'react-toolbox/lib/link/Link'
+import Drawer from 'react-toolbox/lib/drawer/Drawer'
 
-// class ToolBar extends Component {
-//   constructor(props) {
-//     super(props)
-//     this.openDrawer = this.openDrawer.bind(this)
-//   }
-//   openDrawer() {
-//     this.drawer.open = true
-//   }
-//   componentDidMount() {
-//     this.drawer = new drawer.MDCTemporaryDrawer(this.refs.drawer)
-//   }
-//   render() {
-//     return (
-//       <header id="header" className="mdc-toolbar">
-//         <div className="mdc-toolbar__row">
-//           <section className="mdc-toolbar__section mdc-toolbar__section--align-start">
-//             <button className="material-icons mdc-toolbar__icon--menu" onClick={() => this.openDrawer()}>menu</button>
-//           </section>
-//         </div>
-//         <aside className="mdc-temporary-drawer" ref="drawer">
-//           <nav className="mdc-temporary-drawer__drawer">
-//             <nav className="mdc-temporary-drawer__content mdc-list">
-//               <div className="mdc-list-item" onClick={() => console.log('test')}>Home</div>
-//               <div className="mdc-list-item" onClick={() => console.log('test')}>Dashboard</div>
-//               <div className="mdc-list-item" onClick={() => console.log('test')}>History</div>
-//               <div className="mdc-list-item" onClick={() => console.log('test')}>About</div>
-//             </nav>
-//           </nav>
-//         </aside>
-//       </header>
-//     )
-//   }
-// }
+class ToolBar extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      active: false
+    }
+  }
 
-// ToolBar.propTypes = {
-//   navigateTo: PropTypes.func.isRequired
-// }
+  handleToggle() {
+    this.setState({ active: !this.state.active })
+  }
 
-// ToolBar.contextTypes = {
-//   router: PropTypes.object.isRequired
-// }
+  render() {
+    return (
+      <div>
+        <Drawer active={this.state.active} onOverlayClick={() => this.handleToggle()}>
+          <h5>Drunk Limit</h5>
+          <p>You can embed any content you want, for example a Menu.</p>
+        </Drawer>
+        <AppBar title='Drunk Limit' leftIcon='menu' onLeftIconClick={() => this.handleToggle()}>
+          <Navigation type='horizontal'>
+          </Navigation>
+        </AppBar>
+      </div>
+    )
+  }
+}
 
-// export default connect(
-//   state => state.router.route,
-//   dispatch => bindActionCreators({ navigateTo: actions.navigateTo }, dispatch)
-// )(ToolBar)
+export default ToolBar
