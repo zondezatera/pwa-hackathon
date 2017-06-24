@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { SignIn } from './features'
+import { SignInScene } from './scenes'
 
 class App extends Component {
   render() {
     return (
-      <SignIn />
+      <SignInScene />
     )
   }
 }
