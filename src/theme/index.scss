@@ -2,9 +2,17 @@
 html, body {
   height: 100%;
   font-family: 'Abel', sans-serif;
+  background: url('https://firebasestorage.googleapis.com/v0/b/pwa-hackathon-67271.appspot.com/o/background.jpg?alt=media&token=0013aeab-3215-4d26-89b7-4168e2839f71') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 a {
   text-decoration: none;
+}
+.wrapper-view {
+  height: 100%;
 }
 .facebook {
   background-color: #3b5998 !important;
