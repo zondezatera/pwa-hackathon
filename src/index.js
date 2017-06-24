@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom'
 import * as firebase from 'firebase'
 import { Provider } from 'react-redux'
 import { RouterProvider } from 'react-router5'
-import { autoInit } from 'material-components-web'
 import registerServiceWorker from './utils/registerServiceWorker'
 import './theme/index.css'
 import App from './App'
@@ -32,7 +31,6 @@ firebase.initializeApp(config)
 window.$firebase = firebase
 
 registerServiceWorker()
-autoInit()
 router.start(() => {
   ReactDOM.render(wrappedApp, document.getElementById('root'))
 })

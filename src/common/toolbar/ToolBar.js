@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { drawer } from 'material-components-web'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { actions } from 'redux-router5'
+import Link from './Link'
 
 class ToolBar extends Component {
   constructor(props) {
@@ -13,6 +18,7 @@ class ToolBar extends Component {
     this.drawer = new drawer.MDCTemporaryDrawer(this.refs.drawer)
   }
   render() {
+    const { navigateTo } = this.props
     return (
       <header id="header" className="mdc-toolbar">
         <div className="mdc-toolbar__row">
@@ -23,7 +29,9 @@ class ToolBar extends Component {
         <aside className="mdc-temporary-drawer" ref="drawer">
           <nav className="mdc-temporary-drawer__drawer">
             <nav className="mdc-temporary-drawer__content mdc-list">
-              <div className="mdc-list-item" onClick={() => console.log('test')}>Home</div>
+              <div className="mdc-list-item" onClick={() => console.log('test')}>
+                <Link router={ this.router } navigateTo={ navigateTo } name='inbox' options={{ reload: true }}>Inbox</Link>
+              </div>
               <div className="mdc-list-item" onClick={() => console.log('test')}>Dashboard</div>
               <div className="mdc-list-item" onClick={() => console.log('test')}>History</div>
               <div className="mdc-list-item" onClick={() => console.log('test')}>About</div>
@@ -35,4 +43,15 @@ class ToolBar extends Component {
   }
 }
 
-export default ToolBar
+ToolBar.propTypes = {
+  navigateTo: PropTypes.func.isRequired
+}
+
+ToolBar.contextTypes = {
+  router: PropTypes.object.isRequired
+}
+
+export default connect(
+  state => state.router.route,
+  dispatch => bindActionCreators({ navigateTo: actions.navigateTo }, dispatch)
+)(ToolBar)
