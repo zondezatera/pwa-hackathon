@@ -1,6 +1,18 @@
-@import "../../node_modules/bulma/bulma.sass";
-
+@import "../../node_modules/material-components-web/dist/material-components-web.min.css";
 html, body {
   height: 100%;
   font-family: 'Abel', sans-serif;
+}
+.facebook {
+  background-color: #3b5998;
+  color: #f7f7f7;
+}
+.text-center {
+  text-align: center
+}
+.center {
+  margin: 0 auto;
+}
+.wrapper-card {
+  padding: 20px 0px
 }
