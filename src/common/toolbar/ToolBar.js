@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import AppBar from 'react-toolbox/lib/app_bar/AppBar'
 import Drawer from 'react-toolbox/lib/drawer/Drawer'
-import MenuItem from 'react-toolbox/lib/menu/MenuItem'
-import MenuDivider from 'react-toolbox/lib/menu/MenuDivider'
 import { Card, CardTitle } from 'react-toolbox/lib/card'
+import { List, ListItem, ListDivider } from 'react-toolbox/lib/list'
+import { withReactRouterLink } from '../../utils/RRHoc'
+
+const RRListItem = withReactRouterLink(ListItem)
 
 class ToolBar extends Component {
   constructor(props) {
@@ -28,11 +30,13 @@ class ToolBar extends Component {
               subtitle="..."
             />
           </Card>
-          <MenuItem value='home' icon='home' caption='Home' onClick={() => console.log('test')} />
-          <MenuItem value='dashboard' icon='dashboard' caption='Dashboard' onClick={() => console.log('test')} />
-          <MenuItem value='history' icon='history' caption='History' onClick={() => console.log('test')} />
-          <MenuDivider />
-          <MenuItem value='settings' icon='settings' caption='Setting' onClick={() => console.log('test')} />
+          <List>
+            <RRListItem caption='Home' leftIcon='home' to='/' />
+            <RRListItem caption='Dashboard' leftIcon='dashboard' />
+            <RRListItem caption='History' leftIcon='history' />
+            <ListDivider />
+            <RRListItem caption='Setting' leftIcon='settings' />
+          </List>
         </Drawer>
         <AppBar title='Drunk Limit' leftIcon='menu' onLeftIconClick={() => this.handleToggle()} />
       </div>

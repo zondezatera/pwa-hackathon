@@ -9,14 +9,12 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
-    "react-router5": "^4.3.0",
+    "react-router-dom": "^4.1.1",
     "react-toolbox": "^2.0.0-beta.12",
     "react-toolbox-themr": "^1.0.2",
     "redux": "^3.7.0",
     "redux-form": "^6.8.0",
-    "redux-router5": "^4.2.3",
-    "redux-thunk": "^2.2.0",
-    "router5": "^4.7.1"
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -30,13 +28,13 @@
     "eslint-plugin-react": "^7.1.0",
     "node-sass": "^4.5.3",
     "react-scripts": "1.0.7",
-    "redux-logger": "^3.0.6"
+    "redux-devtools-extension": "^2.13.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "yarn run toolbox && react-scripts build",
     "deploy": "firebase deploy",
-    "clean": "rm -rf node_modules && watchman watch-del-all && npm cache clean",
+    "clean": "rm -rf node_modules && npm cache clean",
     "lint": "node node_modules/eslint/bin/eslint.js . --fix --ignore-path .gitignore --format=node_modules/eslint-formatter-pretty",
     "lint-validate": "node node_modules/eslint/bin/eslint.js .  --ignore-path .gitignore  --quiet",
     "css": "node node_modules/node-sass/bin/node-sass src/ -o src/",
@@ -52,6 +50,7 @@
       "CARD",
       "MENU",
       "DATE_PICKER",
+      "LIST",
       "INPUT"
     ],
     "customProperties": {

@@ -1,10 +1,16 @@
 import React, { Component } from 'react'
-import { HomeScene } from './scenes'
+import { Route, BrowserRouter as Router } from 'react-router-dom'
+import { HomeScene, ProfileScene } from './scenes'
 
 class App extends Component {
   render() {
     return (
-      <HomeScene />
+      <Router>
+        <div>
+          <Route exact path='/' component={HomeScene} />
+          <Route exact path='/profile' component={ProfileScene} />
+        </div>
+      </Router>
     )
   }
 }

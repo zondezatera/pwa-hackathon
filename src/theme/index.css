@@ -3,6 +3,9 @@ html, body {
   height: 100%;
   font-family: 'Abel', sans-serif; }
 
+a {
+  text-decoration: none; }
+
 .facebook {
   background-color: #3b5998 !important;
   color: #f7f7f7 !important; }
