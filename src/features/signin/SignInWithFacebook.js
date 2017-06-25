@@ -5,15 +5,13 @@ import Button from 'react-toolbox/lib/button/Button'
 class SignInWithFacebook extends Component {
   signInWithFireBase() {
     const provider = new firebase.auth.FacebookAuthProvider()
-    firebase.auth().signInWithRedirect(provider).then((result) => {
-      console.log(result)
-    }).catch((error) => {
-      alert(`Cannot sign in: ${String(error)}`)
+    firebase.auth().signInWithPopup(provider).then((result) => {
+      this.setState({ user: result.user })
     })
   }
   render() {
     return (
-      <Button className='facebook' href='http://github.com/javivelasco' target='_blank' raised onClick={() => this.signInWithFireBase()}>
+      <Button className='facebook' target='_blank' raised onClick={() => this.signInWithFireBase()}>
         Sign With Facebook
       </Button>
     )
