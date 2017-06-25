@@ -40,7 +40,7 @@ class AlcoholDetail extends Component {
               <Input
                 name='vol'
                 type='number'
-                label='Volume'
+                label='Volume (cc.)'
                 value={this.state.vol}
                 onChange={value => this.handleChange('vol', value)}
               />
