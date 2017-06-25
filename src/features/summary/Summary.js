@@ -67,6 +67,6 @@ class Summary extends Component {
   }
 }
 Summary.propTypes = {
-  summaryData: PropTypes.func
+  summaryData: PropTypes.object
 }
 export default Summary
