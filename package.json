@@ -35,7 +35,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "yarn run toolbox && react-scripts build",
-    "deploy": "firebase deploy",
+    "deploy": " yarn run build && firebase deploy",
     "clean": "rm -rf node_modules && npm cache clean",
     "lint": "node node_modules/eslint/bin/eslint.js . --fix --ignore-path .gitignore --format=node_modules/eslint-formatter-pretty",
     "lint-validate": "node node_modules/eslint/bin/eslint.js .  --ignore-path .gitignore  --quiet",
