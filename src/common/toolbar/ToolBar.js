@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import AppBar from 'react-toolbox/lib/app_bar/AppBar'
 import Drawer from 'react-toolbox/lib/drawer/Drawer'
-import { Card, CardTitle } from 'react-toolbox/lib/card'
+// import { Card, CardTitle } from 'react-toolbox/lib/card'
 import { List, ListItem } from 'react-toolbox/lib/list'
 import { withReactRouterLink } from '../../utils/RRHoc'
 import { menuList } from '../../constants/'
@@ -33,12 +33,12 @@ class ToolBar extends Component {
     return (
       <div>
         <Drawer active={this.state.active} onOverlayClick={() => this.handleToggle()}>
-          <Card style={{ width: '350px', marginTop: '30px' }}>
+          {/* <Card style={{ width: '350px', marginTop: '30px' }}>
             <CardTitle
               avatar="https://placeimg.com/80/80/people"
               title="Guest"
             />
-          </Card>
+          </Card>*/}
           <List>
             {this.renderListItem()}
           </List>

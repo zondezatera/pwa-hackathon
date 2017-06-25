@@ -19,7 +19,7 @@ class Home extends Component {
           className="text-center center"
         />
         <CardActions className="center">
-          <RRButton icon='games' label='Let Do it !' raised primary to="/profile" />
+          <RRButton icon='games' label='Let Do it !' raised primary to="/stepguide" />
         </CardActions>
       </Card>
     )
