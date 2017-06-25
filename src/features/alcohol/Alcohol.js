@@ -21,7 +21,7 @@ class Alcohol extends Component {
             className="center text-center"
           />
           <CardActions className="center">
-            <RRButton label='Choose Drunk !' raised primary to="/summary" />
+            <RRButton label='Choose It !' raised primary to="/summary" />
           </CardActions>
         </Card>
       </CardActions>

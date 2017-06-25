@@ -7,7 +7,7 @@ class Knowledge extends Component {
       <Card className="wrapper-view">
         <CardTitle
           title="Know Your Limit"
-          subtitle="Must know for drunk"
+          subtitle="Must know for drink"
           className="center text-center"
         />
         <CardActions className="center">
