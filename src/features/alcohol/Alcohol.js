@@ -3,9 +3,9 @@ import { Card, CardMedia, CardTitle, CardActions } from 'react-toolbox/lib/card'
 import { alcoholType } from '../../constants'
 
 class Alcohol extends Component {
-  renderItem(item) {
+  renderItem(item, index) {
     return (
-      <CardActions>
+      <CardActions key={`AlcoholType-${index}`}>
         <Card>
           <CardMedia
             aspectRatio="wide"
@@ -14,14 +14,14 @@ class Alcohol extends Component {
           <CardTitle
             title={item.title}
             subtitle={item.subtitle}
-            className="center"
+            className="center text-center"
           />
         </Card>
       </CardActions>
     )
   }
   renderListItem() {
-    return alcoholType.map(item => this.renderItem(item))
+    return alcoholType.map((item, index) => this.renderItem(item, index))
   }
   render() {
     return (

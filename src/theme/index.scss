@@ -1,3 +1,4 @@
+@import "./fonts/material-design-icons/stylesheet.css";
 @import "./react-toolbox/theme.css";
 html, body {
   height: 100%;
@@ -39,4 +40,8 @@ h4 {
 }
 ._3Tmun {
   text-align: center;
+}
+.form-choose-sex {
+  display: inline-block;
+  padding: 10px;
 }
