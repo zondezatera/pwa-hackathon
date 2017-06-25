@@ -5,16 +5,6 @@ const menuList = [
     url: '/'
   },
   {
-    title: 'Dashboard',
-    icon: 'dashboard',
-    url: '/'
-  },
-  {
-    title: 'History',
-    icon: 'history',
-    url: '/'
-  },
-  {
     title: 'Knowledge',
     icon: 'school',
     url: '/knowledge'

@@ -16,7 +16,7 @@ class Home extends Component {
         <CardTitle
           title="Drunk Limit"
           subtitle="Limit and Tracking your drunk !"
-          style={{ textAlign: 'center', margin: ' 0 auto' }}
+          className="text-center center"
         />
         <CardActions className="center">
           <RRButton icon='games' label='Let Do it !' raised primary to="/profile" />

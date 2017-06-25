@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Card, CardTitle, CardActions, CardText } from 'react-toolbox/lib/card'
 
-
 class Knowledge extends Component {
   render() {
     return (

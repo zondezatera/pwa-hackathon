@@ -8,20 +8,11 @@ import './theme/index.css'
 import theme from './theme/react-toolbox/theme'
 import App from './App'
 import store from './store/configStore'
+import firebaseConfig from './config/firebase'
 
-const config = {
-  apiKey: 'AIzaSyCT4dOTEjbQ4Z5JwpZYMd4S0PJiLOvLuKY',
-  authDomain: 'pwa-hackathon-67271.firebaseapp.com',
-  databaseURL: 'https://pwa-hackathon-67271.firebaseio.com',
-  projectId: 'pwa-hackathon-67271',
-  storageBucket: '',
-  messagingSenderId: '419104359716'
-}
-
-firebase.initializeApp(config)
+firebase.initializeApp(firebaseConfig)
 window.$firebase = firebase
 
-registerServiceWorker()
 ReactDOM.render(
   <Provider store={store}>
     <ThemeProvider theme={theme}>
@@ -29,3 +20,4 @@ ReactDOM.render(
     </ThemeProvider>
   </Provider>
   , document.getElementById('root'))
+registerServiceWorker()
