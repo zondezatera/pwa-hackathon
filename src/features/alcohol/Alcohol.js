@@ -21,7 +21,7 @@ class Alcohol extends Component {
             className="center text-center"
           />
           <CardActions className="center">
-            <Button label='Choose It !' raised primary onClick={() => this.props.alcoholData({ ABV: item.ABV })} />
+            <Button label='Choose It !' raised primary onClick={() => this.props.alcoholData({ ABV: item.ABV, itemIndex: index })} />
             {/* <RRButton label='Choose It !' raised primary to="/summary" />*/}
           </CardActions>
         </Card>

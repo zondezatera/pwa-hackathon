@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Home, Profile, Alcohol, Summary } from '../index'
+import { Home, Profile, Alcohol, AlcoholDetail, Summary } from '../index'
 
 class StepGuide extends Component {
   constructor(props) {
@@ -21,6 +21,8 @@ class StepGuide extends Component {
       case 1:
         return (<Alcohol alcoholData ={this.nexStep} />)
       case 2:
+        return (<AlcoholDetail itemIndex={this.state.itemIndex} alcoholData ={this.nexStep} />)
+      case 3:
         return (<Summary summaryData ={this.state} />)
       default:
         return (<Home />)

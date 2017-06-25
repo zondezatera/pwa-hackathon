@@ -5,9 +5,9 @@ import FontIcon from 'react-toolbox/lib/font_icon'
 import { summaryList } from '../../constants'
 
 class Summary extends Component {
-  StandardDrink(vol = 100, ABV = 0.01) {
+  StandardDrink(vol = 0, ABV = 0.01) {
     let standardDrink = 0
-    standardDrink = (vol * ABV * 0.789) / 10
+    standardDrink = Math.round((vol * ABV * 0.789) / 10)
     return standardDrink
   }
 
@@ -28,16 +28,16 @@ class Summary extends Component {
   }
 
   ComparePersonalDrink() {
-    const { ABV, age, sex } = this.props.summaryData
-    const safeDrinkPerPersonal = this.SafeDrink(500, ABV)
-    const standardDrink = this.StandardDrink(age, sex)
-    if (safeDrinkPerPersonal < standardDrink) {
-      return this.renderTextSummary('safe')
+    const { ABV, age, sex, vol } = this.props.summaryData
+    const safeDrinkPerPersonal = this.SafeDrink(age, sex)
+    const standardDrink = this.StandardDrink(vol, ABV)
+    if (safeDrinkPerPersonal > standardDrink) {
+      return this.renderTextSummary('safe', safeDrinkPerPersonal, standardDrink)
     }
-    return this.renderTextSummary('overload')
+    return this.renderTextSummary('overload', safeDrinkPerPersonal, standardDrink)
   }
 
-  renderTextSummary(type) {
+  renderTextSummary(type, safeDrinkPerPersonal, standardDrink) {
     const summaryData = summaryList[type]
     const summaryTitle = summaryData.title
     const summaryText = summaryList[type].description
@@ -46,12 +46,12 @@ class Summary extends Component {
       <CardText className="center">
         <p className="text-center"><FontIcon value={summaryIcon} style={{ fontSize: '100px' }} /></p>
         <h2 className="text-center">{summaryTitle}</h2>
+        <p className="text-center">{`${standardDrink} standard drink`}</p>
         <p>{summaryText}</p>
       </CardText>
     )
   }
   render() {
-    console.log(this.props.summaryData)
     return (
       <Card className="wrapper-view">
         <CardTitle
