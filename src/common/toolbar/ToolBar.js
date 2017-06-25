@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import AppBar from 'react-toolbox/lib/app_bar/AppBar'
 import Drawer from 'react-toolbox/lib/drawer/Drawer'
 import { Card, CardTitle, CardActions } from 'react-toolbox/lib/card'
@@ -15,7 +16,9 @@ class ToolBar extends Component {
     super(props)
     this.state = {
       isLogin: false,
-      active: false
+      active: false,
+      avatar: 'https://placeimg.com/80/80/people',
+      usertitle: 'Guest'
     }
     this.renderProflieCard = this.renderProflieCard.bind(this)
   }
@@ -23,13 +26,15 @@ class ToolBar extends Component {
   loginWithFacebook() {
     const provider = new firebase.auth.FacebookAuthProvider()
     firebase.auth().signInWithPopup(provider).then((result) => {
-      this.setState({ user: result.user, isLogin: true })
+      this.setState({ usertitle: result.user.displayName, avatar: result.user.photoURL, isLogin: true })
+      this.props.getUserData(this.state)
     })
   }
 
   logOut() {
     firebase.auth().signOut().then(() => {
-      this.setState({ user: null })
+      this.setState({ usertitle: 'Guest', avatar: 'https://placeimg.com/80/80/people', isLogin: false })
+      this.props.getUserData(this.state)
     })
   }
 
@@ -47,15 +52,8 @@ class ToolBar extends Component {
   }
 
   renderProflieCard() {
-    console.log(this.state)
-    let avatar = 'https://placeimg.com/80/80/people'
-    let title = 'Guest'
-    if (this.state.isLogin) {
-      title = this.state.user.displayName
-      title = title.split(' ')
-      title = title[0]
-      avatar = this.state.user.photoURL
-    }
+    const avatar = this.state.avatar
+    const title = this.state.usertitle
     return (
       <Card style={{ marginTop: '30px' }}>
         <CardTitle
@@ -85,6 +83,10 @@ class ToolBar extends Component {
       </div>
     )
   }
+}
+
+ToolBar.propTypes = {
+  getUserData: PropTypes.func,
 }
 
 export default ToolBar

@@ -29,6 +29,7 @@ class StepGuide extends Component {
     }
   }
   render() {
+    console.log(this)
     return (
       <div>
         {this.renderStep()}

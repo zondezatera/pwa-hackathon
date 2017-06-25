@@ -12,7 +12,7 @@ class Profile extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      name: 'Guest',
+      name: '',
       age: 18,
       sex: 'male'
     }
