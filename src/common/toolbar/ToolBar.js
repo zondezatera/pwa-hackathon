@@ -36,8 +36,7 @@ class ToolBar extends Component {
           <Card style={{ width: '350px', marginTop: '30px' }}>
             <CardTitle
               avatar="https://placeimg.com/80/80/people"
-              title="Zonde Zatera"
-              subtitle="..."
+              title="Guest"
             />
           </Card>
           <List>
