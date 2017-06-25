@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import { Card, CardMedia, CardTitle, CardActions } from 'react-toolbox/lib/card'
+import Button from 'react-toolbox/lib/button/Button'
 import { alcoholType } from '../../constants'
+import { withReactRouterLink } from '../../utils/RRHoc'
+
+const RRButton = withReactRouterLink(Button)
 
 class Alcohol extends Component {
   renderItem(item, index) {
@@ -16,6 +20,9 @@ class Alcohol extends Component {
             subtitle={item.subtitle}
             className="center text-center"
           />
+          <CardActions className="center">
+            <RRButton label='Choose Drunk !' raised primary to="/summary" />
+          </CardActions>
         </Card>
       </CardActions>
     )
