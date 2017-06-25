@@ -11,8 +11,8 @@ class SignIn extends Component {
           image="https://firebasestorage.googleapis.com/v0/b/pwa-hackathon-67271.appspot.com/o/icon-384x384.png?alt=media&token=7c49b623-d215-432f-a4da-8bddd6fc5c3c"
         />
         <CardTitle
-          title="Drunk Limit"
-          subtitle="Limit and Tracking your drunk !"
+          title="Drink Limit"
+          subtitle="Limit and Tracking your drink !"
           className="text-center center"
         />
         <CardText></CardText>

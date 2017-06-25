@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { Card, CardMedia, CardTitle, CardActions } from 'react-toolbox/lib/card'
 import Button from 'react-toolbox/lib/button/Button'
 import { alcoholType } from '../../constants'
-import { withReactRouterLink } from '../../utils/RRHoc'
+// import { withReactRouterLink } from '../../utils/RRHoc'
 
-const RRButton = withReactRouterLink(Button)
-
+// const RRButton = withReactRouterLink(Button)
 class Alcohol extends Component {
   renderItem(item, index) {
     return (
@@ -21,7 +21,8 @@ class Alcohol extends Component {
             className="center text-center"
           />
           <CardActions className="center">
-            <RRButton label='Choose Drunk !' raised primary to="/summary" />
+            <Button label='Choose It !' raised primary onClick={() => this.props.alcoholData({ ABV: item.ABV, itemIndex: index })} />
+            {/* <RRButton label='Choose It !' raised primary to="/summary" />*/}
           </CardActions>
         </Card>
       </CardActions>
@@ -38,5 +39,7 @@ class Alcohol extends Component {
     )
   }
 }
-
+Alcohol.propTypes = {
+  alcoholData: PropTypes.func
+}
 export default Alcohol

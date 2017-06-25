@@ -43,7 +43,7 @@ class ToolBar extends Component {
             {this.renderListItem()}
           </List>
         </Drawer>
-        <AppBar title='Drunk Limit' leftIcon='menu' onLeftIconClick={() => this.handleToggle()} scrollHide />
+        <AppBar title='Drink Limit' leftIcon='menu' onLeftIconClick={() => this.handleToggle()} scrollHide />
       </div>
     )
   }

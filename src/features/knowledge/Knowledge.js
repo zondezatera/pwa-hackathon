@@ -7,7 +7,7 @@ class Knowledge extends Component {
       <Card className="wrapper-view">
         <CardTitle
           title="Know Your Limit"
-          subtitle="Must know for drunk"
+          subtitle="Must know for drink"
           className="center text-center"
         />
         <CardActions className="center">
@@ -21,7 +21,20 @@ class Knowledge extends Component {
             <p>
                ปริมาณแอลกอฮอล์เป็นเปอร์เซนต์ของปริมาตรเครื่องดื่ม ยิ่งเปอร์เซ็นสูงก็มีโอกาสที่จะได้รับแอลกอฮอล์เข้าร่างกายสูงตามปริมาณที่ระบุ เปอร์เซนต์ยิ่งสูงก็ หมายถึงความ แรง ของเครื่องดื่มที่จะทำให้เราเมาได้เร็วขึ้น ง่ายขึ้นเท่านั้น
             </p>
+            <hr />
+            <h4 className="text-center" > Self-limit drinking </h4>
+            <p>
+               ปริมาณการดื่มอย่างปลอดภัยหรือมีความเสี่ยงน้อยในหนึ่งวัน) เป็นเกณฑ์ที่มีการศึกษามาแล้ว
+            </p>
+            <p>
+              - ผู้ชาย ไม่เกิน 4 Standard Drink
+              <br />
+              - ผู้หญิงไม่เกิน 2 Standard Drink
+              <br />
+              - ผู้สูงอายุ 65 ปีขึ้นไป ไม่เกิน 1 Standard Drink
+            </p>
           </CardText>
+
         </CardActions>
       </Card>
     )

@@ -8,11 +8,6 @@ const menuList = [
     title: 'Knowledge',
     icon: 'school',
     url: '/knowledge'
-  },
-  {
-    title: 'Setting',
-    icon: 'settings',
-    url: '/'
   }
 ]
 
