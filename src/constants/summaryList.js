@@ -1,11 +1,13 @@
 const summaryList = {
   safe: {
-    title: 'safe',
-    description: 'safe description'
+    icon: 'check_circle',
+    title: 'Yes! It\'s safe',
+    description: ''
   },
   overload: {
-    title: 'overload',
-    description: 'overload description'
+    icon: 'cancel',
+    title: 'Oops! It\'s Overload',
+    description: ''
   }
 }
 

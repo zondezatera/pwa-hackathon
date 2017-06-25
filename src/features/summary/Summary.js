@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Card, CardTitle, CardActions, CardText } from 'react-toolbox/lib/card'
+import FontIcon from 'react-toolbox/lib/font_icon'
 import { summaryList } from '../../constants'
 
 class Summary extends Component {
@@ -38,9 +39,11 @@ class Summary extends Component {
     const summaryData = summaryList[type]
     const summaryTitle = summaryData.title
     const summaryText = summaryList[type].description
+    const summaryIcon = summaryList[type].icon
     return (
-      <CardText>
-        <h4 className="text-center">{summaryTitle}</h4>
+      <CardText className="center">
+        <p className="text-center"><FontIcon value={summaryIcon} style={{ fontSize: '100px' }} /></p>
+        <h2 className="text-center">{summaryTitle}</h2>
         <p>{summaryText}</p>
       </CardText>
     )
